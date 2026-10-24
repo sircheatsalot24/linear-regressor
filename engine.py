@@ -65,16 +65,22 @@ class SplitLinearRegressor:
 
         return self
 
-    def predict(self, x) -> float:
+    def predict(self, x: list | float) -> float | list:
         if self.m is None or self.b is None:
             if self.points is not None:
                 self.train(self.points)
+                assert self.m is not None
+                assert self.b is not None
             else:
                 raise AttributeError(
                     "Slope and y-intercept not found! Use .train() first, "
                     "or construct with points."
                 )
-        return self.m * x + self.b
+
+        if isinstance(x, list):
+            return [self.m * xs + self.b for xs in x]
+        else:
+            return self.m * x + self.b
 
     def show_plot(self):
         if self._lefts is None or self._rights is None or self.points is None:
