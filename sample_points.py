@@ -1,6 +1,4 @@
-# put points in a list with tuples in the form (x, y)
-
-gtpts = [
+points = [
     (15.479, 47.297),
     (8.778, 25.323),
     (17.172, 48.417),
