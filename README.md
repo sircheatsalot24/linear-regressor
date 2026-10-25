@@ -12,7 +12,7 @@ We first calculate the midpoint of the data (`(max(xs)-min(xs))/2`) and split th
 
 ## Evaluation
 
-In practice, the model beat Ordinary Least Squares (the most popular linear regression method) abour 30% of the time over a test of ~7000 datasets, but trailed behind about half a percent behind OLS the rest of the time. The upside to this model is the lack of overhead, considerably less than OLS. Compared using mean average error (MAE).
+In practice, the model beat Ordinary Least Squares (the most popular linear regression method) abour 30% of the time over a test of ~7000 datasets, but trailed behind about half a percent behind OLS the rest of the time. The upside to this model is the lack of overhead, considerably less than OLS. Compared using mean absolute error (MAE).
 
 ## Next Steps
 

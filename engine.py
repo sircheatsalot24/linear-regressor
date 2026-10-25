@@ -113,6 +113,6 @@ class SplitLinearRegressor:
 
     def __repr__(self):
         if self.m is not None and self.b is not None and self.mae is not None:
-            return f"SplitLinearRegressor: y = {self.m:.2f}x {'+' if self.b >= 0 else '-'} {abs(self.b):.2f} / Mean Average Error (MAE): {self.mae:.2f}"
+            return f"SplitLinearRegressor: y = {self.m:.2f}x {'+' if self.b >= 0 else '-'} {abs(self.b):.2f} / Mean Absolute Error (MAE): {self.mae:.2f}"
         else:
             return "SplitLinearRegressor: no line defined. Use .train() with points to fit a line."
